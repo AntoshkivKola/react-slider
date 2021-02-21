@@ -1,0 +1,12 @@
+
+$btn-color: #2d2dd8;
+
+%btn{
+  outline: none;
+  border: 1px solid $btn-color;
+  background-color: $btn-color;
+  color: white;
+  font-size: 2rem;
+  border-radius: 5px; 
+  cursor: pointer;
+}

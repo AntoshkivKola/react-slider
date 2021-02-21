@@ -1,0 +1,16 @@
+@import "../common/styles/templates";
+
+
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 50px;
+  background-color: rgb(131, 146, 108);
+}
+
+.slideShowBtn{
+  @extend %btn;
+  padding: 3px 15px;
+  margin-bottom: 15px;
+}

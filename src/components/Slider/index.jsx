@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "./Slide";
+import styles from "./Slider.module.scss";
 
 const slides = {
   imgs: [
@@ -75,7 +76,7 @@ class Slider extends Component {
   render() {
     const { currentSlide, startSlideShow, interval } = this.state;
     return (
-      <div>
+      <div className={styles.container}>
         <Slide
           img={slides.imgs[currentSlide]}
           title={slides.titles[currentSlide]}
@@ -83,11 +84,11 @@ class Slider extends Component {
           nextSlide={this.nextSlide}
           prevSlide={this.prevSlide}
         />
-        <button onClick={this.slideShow}>
+        <button className={styles.slideShowBtn} onClick={this.slideShow}>
           {startSlideShow ? "Stop" : "Start"} slide show
         </button>
-        <div>
-          slide show speed: {interval}s
+        <div className={styles.slideShowSettings}>
+          Slide show speed: {interval}s 
           <input
             type="range"
             name="interval"

@@ -1,0 +1,40 @@
+@import "../../common/styles/templates";
+
+
+.slide{
+  max-width: 1200px;
+}
+
+.imgWwrapper {
+  position: relative;
+
+  > img {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+  }
+}
+
+.btn {
+  position: absolute;
+
+  @extend %btn;
+  
+  top: 50%;
+  cursor: pointer;
+  &_prev {
+    left: 0;
+  }
+  &_next {
+    right: 0;
+  }
+  &:hover {
+    background-color: rgb(29, 154, 226);
+  }
+}
+
+.description {
+  white-space: wrap;
+}
